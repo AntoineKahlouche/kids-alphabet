@@ -1,38 +1,47 @@
 <html>
-    <script>
-        function play(letter){
-            document.getElementById(letter).play()
-        }
-    </script>
-    <style>
-        html {
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 4rem;
-        }
-        body {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-            align-content: center;
-        }
-        div {
-            border: .05rem solid black;
-            margin: .15rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #90CAF9;
-            border-radius: .1rem;
-            cursor: pointer;
-            width: 1.8rem;
-            height: 1.8rem;
-        }
-        .voyelle {
-            background: #EF9A9A;
-        }
-    </style>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86107370-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date())
+
+            gtag('config', 'UA-86107370-4')
+
+            function play(letter){
+                document.getElementById(letter).play()
+            }
+        </script>
+        <style>
+            html {
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 4rem;
+            }
+            body {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+            }
+            div {
+                border: .05rem solid black;
+                margin: .15rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #90CAF9;
+                border-radius: .1rem;
+                cursor: pointer;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+            .voyelle {
+                background: #EF9A9A;
+            }
+        </style>
+    </head>
     <body>
         <audio id="a" src="a.mp3"></audio>
         <div class="voyelle" onclick="play('a')">A</div>

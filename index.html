@@ -1,0 +1,67 @@
+<html>
+    <script>
+        var currentAudio
+        function play(letter){
+            if(currentAudio) document.body.removeChild(currentAudio)
+            currentAudio = document.createElement("embed")
+            currentAudio.setAttribute("src", letter+ ".mp3")
+            currentAudio.setAttribute("hidden", "true")
+            currentAudio.setAttribute("volume", 100)
+            currentAudio.setAttribute("autostart", "true")
+            currentAudio.setAttribute("loop", "false")
+            document.body.appendChild(currentAudio)
+        }
+    </script>
+    <style>
+        html {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+        }
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 50px;
+            background: #90CAF9;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .voyelle {
+            background: #EF9A9A;
+        }
+    </style>
+    <body>
+        <div class="voyelle" onclick="play('a')">A</div>
+        <div onclick="play('b')">B</div>
+        <div onclick="play('c')">C</div>
+        <div onclick="play('d')">D</div>
+        <div class="voyelle" onclick="play('e')">E</div>
+        <div onclick="play('f')">F</div>
+        <div onclick="play('g')">G</div>
+        <div onclick="play('h')">H</div>
+        <div class="voyelle" onclick="play('i')">I</div>
+        <div onclick="play('j')">J</div>
+        <div onclick="play('k')">K</div>
+        <div onclick="play('l')">L</div>
+        <div onclick="play('m')">M</div>
+        <div onclick="play('n')">N</div>
+        <div class="voyelle" onclick="play('o')">O</div>
+        <div onclick="play('p')">P</div>
+        <div onclick="play('q')">Q</div>
+        <div onclick="play('r')">R</div>
+        <div onclick="play('s')">S</div>
+        <div onclick="play('t')">T</div>
+        <div class="voyelle" onclick="play('u')">U</div>
+        <div onclick="play('v')">V</div>
+        <div onclick="play('w')">W</div>
+        <div onclick="play('x')">X</div>
+        <div class="voyelle" onclick="play('y')">Y</div>
+        <div onclick="play('z')">Z</div>
+    </body>
+</html>
